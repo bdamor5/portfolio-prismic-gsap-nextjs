@@ -72,7 +72,6 @@ export default async function Footer() {
             <PrismicNextLink
               field={settings.data.resume_link}
               className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
-              aria-label={settings.data.name}
             >
               <FaRegFilePdf />
             </PrismicNextLink>
