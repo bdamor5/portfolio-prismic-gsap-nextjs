@@ -30,9 +30,9 @@ const ContentIndex = async ({
     "creamery",
   ];
 
-  const orderedItems = orderForProjects.map(
-    (name) =>projects?.find(({data}) =>data?.title?.toLowerCase().includes(name))
-  );
+  const orderedItems = orderForProjects
+  .map((name) => projects.find(({ data }) => data?.title?.toLowerCase().includes(name)))
+  .filter((item): item is Content.ProjectDocument => item !== undefined);
 
   return (
     <Bounded
