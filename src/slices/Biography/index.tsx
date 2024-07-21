@@ -60,8 +60,6 @@ const Biography = ({ slice }: BiographyProps): JSX.Element => {
     return () => ctx.revert();
   }, []);
 
-  console.log('00000-bio',slice)
-
   return (
     <Bounded
       data-slice-type={slice.slice_type}

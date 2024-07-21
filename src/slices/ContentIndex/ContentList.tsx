@@ -3,10 +3,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Content, isFilled, asImageSrc } from "@prismicio/client";
 import { MdArrowOutward } from "react-icons/md";
-import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { PrismicRichText } from "@prismicio/react";
+import { PrismicNextLink } from "@prismicio/next";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -132,7 +132,9 @@ const ContentList = ({
                 key={index}
                 className="list-item opacity-1"
                 onMouseEnter={() => handleMouseEnter(index)}
-                ref={(el) => (itemsRef.current[index] = el)}
+                ref={(el) => {
+                  itemsRef.current[index] = el;
+                }}
               >
                 <div
                   className="flex flex-col md:flex-row justify-between border-t border-t-slate-100 py-10 text-slate-200"
@@ -151,13 +153,13 @@ const ContentList = ({
                       <PrismicRichText field={item.data.description} />
                     </div>
                   </div>
-                  <Link
-                    href={item.data.link.url}
-                    target="_blank"
-                    className="text-yellow-400 font-bold mr-auto md:ml-auto flex items-center gap-2 text-xl md:ml-0 mt-5 md:mt-0"
+
+                  <PrismicNextLink
+                    field={item.data.link}
+                    className="text-yellow-400 font-bold mr-auto md:ml-auto flex items-center gap-2 text-xl  mt-5 md:mt-0"
                   >
                     {viewMoreText} <MdArrowOutward />
-                  </Link>
+                  </PrismicNextLink>
                 </div>
               </li>
             )}
