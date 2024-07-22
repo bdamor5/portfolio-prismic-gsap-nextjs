@@ -4,11 +4,15 @@ const Experience = () => {
   return (
     <div className="flex flex-col">
       <div>
-        <Heading as="h1" size="xl" className="col-start-1 break-all text-center md:text-left">
+        <Heading
+          as="h1"
+          size="xl"
+          className="col-start-1 break-all text-center md:text-left"
+        >
           Experience
         </Heading>
       </div>
-      <div className='mt-15 md:mt-20 flex justify-center'>
+      <div className="mt-15 md:mt-20 flex justify-center">
         <ul className="flex flex-col timeline timeline-vertical timeline-snap-icon max-md:timeline-compact ">
           <li>
             <div className="timeline-middle">
@@ -26,7 +30,7 @@ const Experience = () => {
               </svg>
             </div>
             <div className="timeline-start mb-10 md:text-end">
-              <time className="font-mono italic">Feb 2023 - Current</time>
+              <time className="font-mono italic">Nov 2022 - Current</time>
               <div className="text-lg font-black">Blinkworx</div>
               Software Developer
             </div>
@@ -49,7 +53,7 @@ const Experience = () => {
               </svg>
             </div>
             <div className="timeline-end mb-10">
-              <time className="font-mono italic">Sept 2021 - Jan 2023</time>
+              <time className="font-mono italic">Sept 2021 - Oct 2022</time>
               <div className="text-lg font-black">Arctic Devs</div>
               Full stack developer
             </div>
@@ -77,7 +81,7 @@ const Experience = () => {
               Technical Cloud Engineer
             </div>
             <hr />
-          </li>          
+          </li>
         </ul>
       </div>
     </div>
